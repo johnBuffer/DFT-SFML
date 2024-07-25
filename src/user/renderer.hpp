@@ -128,7 +128,11 @@ struct Renderer : public pez::core::IRenderer
                        "[R] - Reset time and tracer\n"
                        "[F] - Toggle focus on tip position\n"
                        "[P] - Toggle paint dispenser rendering\n"
-                       "[X] - Toggle slow motion\n");
+                       "[X] - Toggle slow motion\n"
+                       "\n"
+                       "[Mouse Right] - Draw\n"
+                       "[Mouse Left]  - Move viewport\n"
+                       "[Mouse Wheel] - Zoom");
     }
 
     void render(pez::render::Context& context) override
