@@ -25,7 +25,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 add_custom_command(
     TARGET ${PROJECT_NAME}
     COMMENT "Copy Res directory"
-    POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res
     VERBATIM)
 
 if(WIN32)
